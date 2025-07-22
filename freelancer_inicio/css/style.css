@@ -1,0 +1,138 @@
+:root{ /* Define CSS variables for colors */
+    --blanco:#ffffff; /* White color */
+    --oscuro:#212121; /* Dark color */
+    --primario:#FFC107; /* Primary color (yellow) */
+    --secundario: #0097A7; /* Secondary color (blue) */
+    --gris: #757575; /* Gray color */
+    --grisClaro: #DFE9F3;
+}
+
+html{
+    font-size: 62.5%; /* Set base font size (1rem = 10px) */
+    box-sizing: border-box; /* Use border-box for sizing */
+}
+
+*,*:before,*:after {
+    box-sizing: inherit; /* Inherit box-sizing from html */
+}
+body{
+    font-size: 16px; /* Set default font size */
+    font-family: "Roboto", sans-serif; /* Use Roboto font */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);/* Background gradient */
+}
+h1{
+    font-size: 3.8rem; /* Large heading size */
+}
+h2{
+    font-size: 2.8rem; /* Medium heading size */
+}
+h3{
+    font-size: 1.8rem; /* Small heading size */
+}
+h1,h2,h3{
+    text-align: center; /* Center all headings */
+}
+.titulo{
+    text-align: center; /* Center title */
+    font-size: 3.8rem; /* Large title size */
+}
+
+.titulo span{
+    font-size: 2rem; /* Smaller font for span inside title */
+}
+.contenedor{
+    max-width: 120rem; /* Maximum container width */
+    /* margin-top: 0px; */
+    /* margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    margin: 0 auto 0 auto; /* Center container horizontally */
+}
+.boton{
+    background-color: var(--secundario); /* Button background color */
+    color: var(--blanco); /* Button text color */
+    padding: 1rem 3rem; /* Button padding */
+    margin-top: 1rem; /* Space above button */
+    font-size: 2rem; /* Button font size */
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    border-radius: .5rem; /* Rounded corners */
+    width: 90%; /* Button width on small screens */
+    text-align: center; /* Center text */
+}
+@media (min-width: 480px) {
+    .boton{
+        width: auto; /* Button width auto on larger screens */
+    }
+}
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48); /* Standard shadow property */
+    background-color: var(--blanco); /* Background color for shadowed elements */
+    padding: 2rem; /* Padding for shadowed elements */
+    border-radius: 1rem; /* Rounded corners for shadowed elements */
+
+}
+.nav-bg{
+    background-color: var(--secundario); /* Navigation background color */
+}
+.navegacion-principal{
+    /* background-color: var(--secundario); */
+    padding:1rem; /* Padding for navigation */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    /* flex-direction: row; */
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row; /* Row direction on larger screens */
+        justify-content: space-between; /* Space between items */
+    }
+}
+
+.navegacion-principal a {
+    display: block; /* Block-level links */
+    text-align: center; /* Center link text */
+    color: var(--blanco); /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 2rem; /* Link font size */
+    font-weight: 700; /* Bold link text */
+    padding: 1rem; /* Padding for links */
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario); /* Change background on hover */
+    color: var(--oscuro); /* Change text color on hover */
+}
+
+.hero{
+    background-image: url(../img/hero.jpg); /* Hero section background image */
+    background-repeat: no-repeat; /* Do not repeat image */
+    background-size: cover; /* Cover entire area */
+    height: 450px; /* Hero section height */
+    position: relative; /* Position relative for overlay */
+    margin-bottom: 2rem; /* Space below hero section */
+}
+.contenido-hero{
+    position: absolute; /* Overlay content absolutely */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgb(0 0 0 /70%); /* Alternative background syntax */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco); /* White text for hero content */
+}
+.ubicacion{
+    display: flex; /* Use flexbox */
+    align-items: flex-end; /* Align items to bottom */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 2rem; /* Space above location */
+}
