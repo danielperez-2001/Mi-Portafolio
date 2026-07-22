@@ -1,6 +1,6 @@
 
 # freelancer_inicio
-mis proyectos de udemy y personales
+Portafolio 
 =======
 <h1 align="center">Hola 👋, Me llamo: Daniel Perez</h1>
 <h3 align="center">Soy un Full Stack apacionado en aprender mas cosas</h3>
