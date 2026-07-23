@@ -1,0 +1,393 @@
+/* ================================================
+   style.css – Estilos completos para tu página con comentarios
+   ================================================ */
+
+/* Variables globales */
+:root {
+    /* Define variables de color y temas */
+    --blanco: #ffffff;
+    /* Color blanco */
+    --oscuro: #212121;
+    /* Color oscuro / casi negro */
+    --primario: #FFC107;
+    /* Color principal (amarillo) */
+    --secundario: #0097A7;
+    /* Color secundario (turquesa) */
+    --gris: #757575;
+    /* Color gris medio */
+    --grisClaro: #DFE9F3;
+    /* Color gris claro */
+}
+
+/* Reset global y box-sizing */
+html {
+    /* Estilo base para html */
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+    /* Include padding/border en width/height */
+}
+
+*,
+*::before,
+*::after {
+    /* Reset box-sizing */
+    box-sizing: inherit;
+    /* Hereda box-sizing de html */
+    margin: 0;
+    /* Elimina márgenes por defecto */
+    padding: 0;
+    /* Elimina padding por defecto */
+}
+
+/* Estilos del body y tipografía */
+body {
+    font-family: "Roboto", sans-serif;
+    /* Fuente principal */
+    font-size: 1.6rem;
+    /* 16px base */
+    background: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    /* Fondo degradado */
+    color: var(--oscuro);
+    /* Color de texto predeterminado */
+    line-height: 1.5;
+    /* Altura de línea */
+}
+
+/* Encabezados */
+h1 {
+    font-size: 3.8rem;
+}
+
+/* Título principal grande */
+h2 {
+    font-size: 2.8rem;
+}
+
+/* Subtítulos medianos */
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Títulos de secciones */
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    /* Centrar todos los encabezados */
+    margin-bottom: 2rem;
+    /* Espacio inferior */
+}
+
+/* Utilidades flex y ancho */
+.flex {
+    display: flex;
+    /* Activa flexbox */
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+    /* Alinea hijos a la derecha */
+}
+
+.w-sm-100 {
+    width: 100%;
+    /* Utilidad: ancho 100% */
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+        /* En pantallas mayores, auto */
+    }
+}
+
+/* Contenedor principal centrado */
+.contenedor {
+    max-width: 120rem;
+    /* Máximo ancho */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    padding: 0 2rem;
+    /* Espaciado lateral */
+}
+
+/* =========================================
+   Cabecera y Navegación
+   ========================================= */
+header .titulo {
+    font-size: 3.8rem;
+    /* Tamaño del logo/título */
+    text-align: center;
+    /* Centrar texto */
+    margin: 2rem 0;
+    /* Espacio arriba y abajo */
+}
+
+header .titulo span {
+    display: block;
+    /* Mostrar en línea nueva */
+    font-size: 2rem;
+    /* Tamaño secundario */
+    font-weight: normal;
+    /* Peso normal */
+    color: var(--primario);
+    /* Color primario */
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+    /* Fondo de nav */
+}
+
+.navegacion-principal {
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    /* Vertical por defecto */
+    padding: 1rem 0;
+    /* Padding vertical */
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    /* Enlaces blancos */
+    text-decoration: none;
+    /* Sin subrayado */
+    font-size: 2rem;
+    /* Texto grande */
+    font-weight: 700;
+    /* Negrita */
+    text-align: center;
+    /* Centrado */
+    padding: 1rem;
+    /* Espacio interno */
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    /* Hover primario */
+    color: var(--oscuro);
+    /* Texto oscuro al pasar */
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        /* Horizontal en desktop */
+        justify-content: space-between;
+        /* Espacio entre items */
+    }
+}
+
+/* =========================================
+   Sección Hero
+   ========================================= */
+.hero {
+    position: relative;
+    /* Para posicionar overlay */
+    height: 45rem;
+    /* Alto fijo */
+    background: url(../img/hero.jpg) center/cover no-repeat;
+    /* Imagen */
+    margin-bottom: 2rem;
+    /* Separación inferior */
+}
+
+.contenido-hero {
+    position: absolute;
+    /* Sobre la imagen */
+    inset: 0;
+    /* Ocupa todo el hero */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Capa semitransp */
+    display: flex;
+    /* Flex centra contenido */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--blanco);
+    /* Texto blanco */
+}
+
+.ubicacion {
+    display: flex;
+    /* Línea icono + texto */
+    align-items: center;
+    /* Vertical centrado */
+    gap: 1rem;
+    /* Espacio entre */
+    margin-top: 2rem;
+    /* Separación arriba */
+}
+
+.ubicacion p {
+    font-size: 1.8rem;
+    /* Texto ubicación */
+}
+
+/* =========================================
+   Sección Servicios
+   ========================================= */
+.sombra {
+    background-color: var(--blanco);
+    /* Fondo blanco */
+    box-shadow: 0 5px 15px rgba(112, 112, 112, 0.48);
+    /* Sombra */
+    border-radius: 1rem;
+    /* Esquinas redondeadas */
+    padding: 2rem;
+    /* Espacio interno */
+    margin-bottom: 2rem;
+    /* Separación abajo */
+}
+
+.servicios {
+    /* Contenedor de tarjetas */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Espacio vertical */
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        /* Grid en desktop */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas */
+        gap: 2rem;
+        /* Gap general */
+    }
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    /* Título secundario */
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.servicio p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.servicio .iconos {
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    /* Círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    /* Centrado + espacio abajo */
+}
+
+/* =========================================
+   Formulario de Contacto
+   ========================================= */
+.formulario {
+    background-color: var(--gris);
+    /* Fondo gris */
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 3rem auto;
+    /* Centrado vertical/horiz */
+    width: min(60rem, 100%);
+    /* Máx 60rem, min 100% */
+}
+
+.formulario fieldset {
+    border: none;
+    /* Sin borde */
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--primario);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Grid interno de campos */
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 columnas */
+        gap: 1rem;
+    }
+
+    .contenedor-campos .campo:nth-child(3),
+    .contenedor-campos .campo:nth-child(4) {
+        grid-column: 1 / -1;
+        /* Ocupar todo el ancho */
+    }
+}
+
+.campo label {
+    display: block;
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.input-text,
+.campo textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+.campo textarea {
+    resize: vertical;
+    /* Permite redimensionar solo vertical */
+    height: 20rem;
+}
+
+.alinear-derecha.flex input[type="submit"] {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: .5rem;
+    width: 100%;
+    /* Ancho completo */
+    cursor: pointer;
+}
+
+.alinear-derecha.flex input[type="submit"]:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/* =========================================
+   Pie de página
+   ========================================= */
+.footer {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
