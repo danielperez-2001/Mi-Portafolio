@@ -1,0 +1,72 @@
+/* -------------------------------------------------------------
+ * Estilos del Panel de Control (Dashboard)
+ * ------------------------------------------------------------- */
+
+.card-kpi {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-card);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-kpi:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: #cbd5e1;
+}
+
+.kpi-accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.kpi-gtq .kpi-accent-bar { background: linear-gradient(90deg, #2563eb, #38bdf8); }
+.kpi-usd .kpi-accent-bar { background: linear-gradient(90deg, #059669, #34d399); }
+.kpi-ocupacion .kpi-accent-bar { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+.kpi-gastos .kpi-accent-bar { background: linear-gradient(90deg, #e11d48, #fb7185); }
+
+.kpi-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+}
+
+.kpi-value {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-subtext {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.progress-kpi {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e2e8f0;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-kpi-bar {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #10b981, #34d399);
+}

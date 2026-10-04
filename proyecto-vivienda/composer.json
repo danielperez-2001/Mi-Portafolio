@@ -1,0 +1,29 @@
+{
+    "name": "la-estanza/sistema-alquileres",
+    "description": "Sistema de gestión administrativa y control anual de alquileres de apartamentos y dorms para La Estanza",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Arquitectura y Desarrollo La Estanza",
+            "email": "desarrollo@laestanza.local"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Support/Helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

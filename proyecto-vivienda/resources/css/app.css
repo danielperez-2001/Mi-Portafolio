@@ -1,0 +1,336 @@
+/* -------------------------------------------------------------
+ * Sistema de Alquileres La Estanza - Hoja de Estilos Principal
+ * ------------------------------------------------------------- */
+
+/* 1. Variables y Tokens de Diseño */
+@import "./variables.css";
+@import "./modulos/control-anual.css";
+@import "./modulos/panel.css";
+@import "./modulos/login.css";
+
+/* 2. Reseteo y Base Tipográfica */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* 3. Estructura de Layout Principal */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Lateral */
+.app-sidebar {
+    width: 260px;
+    background-color: var(--brand-sidebar);
+    color: #cbd5e1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+    z-index: 100;
+}
+
+.sidebar-brand {
+    padding: 1.25rem 1.25rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand img {
+    max-height: 38px;
+    width: auto;
+}
+
+.sidebar-nav {
+    padding: 1rem 0.75rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.sidebar-section-title {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #64748b;
+    padding: 0.75rem 0.5rem 0.35rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-sm);
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    margin-bottom: 2px;
+}
+
+.sidebar-link:hover {
+    background-color: var(--brand-sidebar-hover);
+    color: #f8fafc;
+}
+
+.sidebar-link.active {
+    background-color: var(--brand-primary);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.sidebar-link .nav-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(0, 0, 0, 0.15);
+    font-size: 0.78rem;
+    color: #94a3b8;
+}
+
+/* Área Principal de Contenido */
+.app-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: var(--bg-app);
+}
+
+/* Banner de Aviso de Modo Demostración */
+.banner-demo-aviso {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+    color: #fbbf24;
+    padding: 0.45rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #f59e0b;
+    z-index: 90;
+}
+
+.banner-demo-badge {
+    background-color: #d97706;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Encabezado / Topbar */
+.app-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.85rem 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.header-breadcrumbs a {
+    color: var(--brand-primary);
+    text-decoration: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Contenido de la Pantalla */
+.app-content {
+    padding: 1.75rem;
+    flex-grow: 1;
+}
+
+/* Tarjetas y Contenedores */
+.content-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color-subtle);
+    padding-bottom: 0.85rem;
+}
+
+.card-title-main {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.card-subtitle-main {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Botones Personalizados */
+.btn-brand-primary {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 1rem;
+    transition: var(--transition-fast);
+}
+
+.btn-brand-primary:hover {
+    background-color: var(--brand-primary-hover);
+    border-color: var(--brand-primary-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-navy {
+    background-color: #1e3a5f;
+    border-color: #1e3a5f;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.45rem 1.25rem;
+    transition: var(--transition-fast);
+}
+
+.btn-navy:hover {
+    background-color: #152b47;
+    border-color: #152b47;
+    color: #ffffff;
+}
+
+/* Tarjetas de Secciones de Formulario (img2, img3, img4) */
+.form-section-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.form-section-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.widget-contratos-vencen th,
+.widget-contratos-vencen td {
+    font-size: 0.88rem;
+}
+
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+/* Tablas Administrativas Modernas */
+.table-custom {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 0.88rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-custom thead th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Badges de Monedas */
+.badge-gtq {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.badge-usd {
+    background-color: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* Responsividad en móvil */
+@media (max-width: 991.98px) {
+    .app-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -260px;
+    }
+
+    .app-sidebar.show {
+        left: 0;
+    }
+
+    .app-content {
+        padding: 1rem;
+    }
+}

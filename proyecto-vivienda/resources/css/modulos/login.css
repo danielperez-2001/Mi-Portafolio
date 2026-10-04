@@ -1,0 +1,33 @@
+/* -------------------------------------------------------------
+ * Estilos de Pantalla de Login (Visual / Demostración)
+ * ------------------------------------------------------------- */
+
+.login-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 15% 15%, #1e293b 0%, #0f172a 100%);
+    padding: 1.5rem;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-card-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 2.25rem 2rem 1.75rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-card-body {
+    padding: 2rem;
+}

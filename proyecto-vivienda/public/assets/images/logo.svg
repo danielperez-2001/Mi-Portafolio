@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60" fill="none">
+    <rect width="260" height="60" rx="8" fill="#1e293b"/>
+    <g transform="translate(14, 12)">
+        <path d="M18 4L4 16H9V32H15V22H21V32H27V16H32L18 4Z" fill="#38bdf8"/>
+        <path d="M15 13H21V18H15V13Z" fill="#0f172a"/>
+        <circle cx="28" cy="8" r="3" fill="#10b981"/>
+    </g>
+    <text x="62" y="27" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" letter-spacing="1">LA ESTANZA</text>
+    <text x="62" y="43" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="500" fill="#94a3b8" letter-spacing="1.5">ALQUILERES &amp; DORMS</text>
+</svg>

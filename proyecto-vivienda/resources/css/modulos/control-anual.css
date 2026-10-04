@@ -1,0 +1,208 @@
+/* -------------------------------------------------------------
+ * Estilos del Módulo Control Anual (Matriz de Pagos y Ocupación)
+ * ------------------------------------------------------------- */
+
+.control-anual-wrapper {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.table-responsive-anual {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 720px;
+}
+
+.tabla-matriz-anual {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.82rem;
+}
+
+.tabla-matriz-anual th,
+.tabla-matriz-anual td {
+    padding: 0.55rem 0.65rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color-subtle);
+    border-right: 1px solid var(--border-color-subtle);
+}
+
+.tabla-matriz-anual thead th {
+    background-color: #f8fafc;
+    color: var(--brand-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Columna Fija: Apartamento y Datos Base */
+.tabla-matriz-anual th.col-fija,
+.tabla-matriz-anual td.col-fija {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg-card);
+    z-index: 8;
+    min-width: 220px;
+    max-width: 260px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.04);
+}
+
+.tabla-matriz-anual thead th.col-fija {
+    z-index: 15;
+    background-color: #f1f5f9;
+}
+
+/* Celda de Mes Interactivo */
+.celda-mes {
+    min-width: 110px;
+    padding: 0.45rem !important;
+    text-align: center;
+    background-color: #ffffff;
+    transition: var(--transition-fast);
+}
+
+.celda-item {
+    display: block;
+    padding: 0.35rem 0.45rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.celda-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Estados Visuales de Celdas */
+.celda-estado-pagado {
+    background-color: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.celda-estado-pagado:hover {
+    background-color: #d1fae5;
+}
+
+.celda-estado-parcial {
+    background-color: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+}
+
+.celda-estado-parcial:hover {
+    background-color: #fef3c7;
+}
+
+.celda-estado-pendiente {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+.celda-estado-pendiente:hover {
+    background-color: #fee2e2;
+}
+
+.celda-estado-vacio {
+    background-color: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #64748b;
+}
+
+.celda-estado-vacio:hover {
+    background-color: #e2e8f0;
+}
+
+.celda-estado-sin-datos {
+    background-color: #faf5ff;
+    border-color: #f3e8ff;
+    color: #6b21a8;
+}
+
+/* Tipografía de Celda */
+.celda-monto {
+    font-weight: 700;
+    font-size: 0.78rem;
+    line-height: 1.2;
+}
+
+.celda-meta {
+    font-size: 0.68rem;
+    opacity: 0.85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    margin-top: 2px;
+}
+
+.celda-ref {
+    font-family: monospace;
+    font-size: 0.65rem;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+/* Filas de Totales y Resumen */
+.fila-total-gtq td {
+    background-color: #eff6ff !important;
+    color: #1e40af;
+    font-weight: 700;
+    border-top: 2px solid #bfdbfe;
+}
+
+.fila-total-usd td {
+    background-color: #ecfdf5 !important;
+    color: #065f46;
+    font-weight: 700;
+}
+
+.fila-gastos-gtq td,
+.fila-gastos-usd td {
+    background-color: #fff1f2 !important;
+    color: #9f1239;
+    font-weight: 600;
+}
+
+/* Leyenda de Estados */
+.leyenda-estados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.8rem;
+}
+
+.leyenda-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.leyenda-circulo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}

@@ -1,0 +1,50 @@
+:root {
+    /* Paleta Principal Sofisticada (Financiera / Inmobiliaria Premium) */
+    --brand-primary: #3b82f6;
+    --brand-primary-hover: #2563eb;
+    --brand-primary-subtle: rgba(59, 130, 246, 0.12);
+    --brand-accent: #0ea5e9;
+    --brand-dark: #0f172a;
+    --brand-navy: #1e293b;
+    --brand-sidebar: #0f172a;
+    --brand-sidebar-hover: #1e293b;
+
+    /* Semántica Financiera */
+    --finance-income: #10b981;
+    --finance-income-subtle: rgba(16, 185, 129, 0.12);
+    --finance-expense: #ef4444;
+    --finance-expense-subtle: rgba(239, 68, 68, 0.12);
+    --finance-warning: #f59e0b;
+    --finance-warning-subtle: rgba(245, 158, 11, 0.12);
+    --finance-purple: #8b5cf6;
+    --finance-purple-subtle: rgba(139, 92, 246, 0.12);
+    --finance-usd: #059669;
+    --finance-gtq: #2563eb;
+
+    /* Fondos y Superficies */
+    --bg-app: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f1f5f9;
+    --border-color: #e2e8f0;
+    --border-color-subtle: #edf2f7;
+
+    /* Tipografía y Textos */
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    /* Sombras y Elevaciones */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 12px 20px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    /* Radios y Transiciones */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --transition-fast: all 0.15s ease-in-out;
+    --transition-normal: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

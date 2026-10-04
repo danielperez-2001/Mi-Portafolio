@@ -1,0 +1,22 @@
+# Dependencias
+/vendor/
+/node_modules/
+
+# Entorno local
+.env
+.env.local
+.env.*.local
+
+# Salidas temporales y logs
+/storage/logs/*.log
+!/storage/logs/.gitkeep
+
+# IDEs y SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Compilados de Webpack (opcional si se compilan en CI/CD, pero dejamos .gitkeep)
+# /public/assets/css/app.css*
+# /public/assets/js/app.js*
